@@ -1,64 +1,129 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio Nashaly</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Nashaly Portfolio</title>
 </head>
 <body>
-
-  <!-- Sección: Inicio -->
-  <section id="inicio">
-  <img src="perfil-modified.png" alt="Perfil" />
-  <div class="informacion">
-    <h1>Nashaly Estefany Orozco Ortiz</h1>
-    <h2>Desarrollador Full Stack</h2>
-    <p>Developer apasionado por la creación de soluciones tecnológicas eficientes con experiencia en desarrollo de aplicaciones web y móviles.</p>
-
-    <div class="enlaces">
-      <a href="https://github.com/nashaly-estefany" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/nashaly-estefany-orozco-ortiz-0b59b82b4/" target="_blank">LinkedIn</a>
-      <a href="CV en ingles y español.pdf" download>Descargar CV</a>
+  <!-- Header -->
+  <header>
+    <a href="#home" class="logo">Nashaly</a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#home" onclick="seleccionar()">HOME</a></li>
+        <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+        <li><a href="#education" onclick="seleccionar()">EDUCATION</a></li>
+        <li><a href="#experience" onclick="seleccionar()">EXPERIENCE</a></li>
+        <li><a href="#contact" onclick="seleccionar()">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+      <i class="fa-solid fa-bars"></i>
     </div>
-  </div>
-</section>
+  </header>
 
-  <!-- Sección: Proyectos -->
-  <section id="proyectos">
-    <h2>Proyectos</h2>
-
-    <div class="proyecto1">
-      <img src="falcon.png" alt="Proyecto 1" />
-      <a href="https://github.com/nashaly-estefany/falcon" target="_blank">Falcon</a>
-      <p>sistema inteligente de ciberseguridad para la deteccion de comportamientos delictivos.</p>
-      <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript, Motoko</p>
-    </div>
-    <div class="proyecto2">
-      <img src="system.png" alt="Proyecto 2" />
-      <a href="https://github.com/nashaly-estefany/system" target="_blank">System</a>
-      <p>sistema de deteccion preventivo de anomalias en el trasporte .</p>
-      <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript, Motoko</p>
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="home-wrapper">
+      <div class="home-img">
+        <img src="img/perfil.png" alt="Photo of Nashaly">
+      </div>
+      <div class="home-content">
+        <h1>Hi, I'm <span>Nashaly</span></h1>
+        <h3 class="typing-text">I'm a <span></span></h3>
+        <p>Passionate developer dedicated to creating efficient technological solutions, with experience in both web and mobile application development.</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/nashaly-estefany-orozco-ortiz-336684369/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/nashaly-estefany"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="my_cv_and_cover_letter.pdf" download class="btn-download">
+          <i class="fa fa-download"></i> My CV & Cover Letter
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Sección: CV -->
-  
-  <!-- Sección: Habilidades Técnicas -->
-  <section id="habilidades">
-    <h2>Habilidades Técnicas</h2>
-    <ul>
-      <li>Lenguajes: HTML, CSS, JavaScript, python </li>
-      <li>Frameworks: React</li>
-      <li>Bases de datos: MongoDB, MySQL</li>
-      <li>Herramientas: Git, GitHub, VS Code</li>
-    </ul>
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="contenido-seccion">
+      <h2>Skills</h2>
+      <div class="fila">
+        <div class="col">
+          <h3>Technical Skills</h3>
+          <div class="skill"><span>JavaScript</span><div class="barra-skill"><div class="progreso"><span>50%</span></div></div></div>
+          <div class="skill"><span>HTML & CSS</span><div class="barra-skill"><div class="progreso"><span>70%</span></div></div></div>
+          <div class="skill"><span>Database</span><div class="barra-skill"><div class="progreso"><span>75%</span></div></div></div>
+          <div class="skill"><span>GitHub</span><div class="barra-skill"><div class="progreso"><span>80%</span></div></div></div>
+          <div class="skill"><span>Python</span><div class="barra-skill"><div class="progreso"><span>50%</span></div></div></div>
+          <div class="skill"><span>English</span><div class="barra-skill"><div class="progreso"><span>50%</span></div></div></div>
+        </div>
+        <div class="col">
+          <h3>Professional Skills</h3>
+          <div class="skill"><span>Communication</span><div class="barra-skill"><div class="progreso"><span>88%</span></div></div></div>
+          <div class="skill"><span>Teamwork</span><div class="barra-skill"><div class="progreso"><span>85%</span></div></div></div>
+          <div class="skill"><span>Creativity</span><div class="barra-skill"><div class="progreso"><span>80%</span></div></div></div>
+          <div class="skill"><span>Self-Learning</span><div class="barra-skill"><div class="progreso"><span>80%</span></div></div></div>
+        </div>
+      </div>
+    </div>
   </section>
-  
-  <section id="cv">
-    <h2>CV Profesional</h2>
-    <p>Puedes descargar mi CV en formato PDF para conocer más sobre mi experiencia y formación.</p>
-    <a href="CV en ingles y español.pdf" download>Descargar CV</a>
+
+  <!-- Education Section -->
+  <section id="education" class="education">
+    <div class="contenido-seccion">
+      <h2>Education</h2>
+      <img src="img/universidad_tecnolgica_metropolitana_de_aguascalientes_logo-modified.png" alt="Logouni">
+      <h2>Universidad Tecnolgica Metropolitana De Aguascalientes</h2>
+      <p>TSU Artificial Intelligence</p>
+
+    </div>
   </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <div class="contenido-seccion">
+      <h2>Experience</h2>
+      <div class="falcon">
+        <img src="img/falcon.png" alt="logo falcon">
+        <p>Falcon is an intelligent system developed with artificial intelligence for the automated detection of criminal 
+            activity and reporting to the 5C!, which is adaptive for state cameras.</p>
+            <a href="https://github.com/nashaly-estefany/falcon.git">More<i class="GitHubFalcon"></i></a>
+      </div>
+
+       <div class="System">
+        <img src="img/system.png" alt="logo System">
+        <p>System is a system for detecting aggressive behavior, detecting failures in transportation 
+            to obtain maintenance. It also has a system for organizing the personnel in charge.</p>
+            <a href="https://github.com/nashaly-estefany/system.git">More<i class="Gitsystem"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="contenido-seccion">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xjkrezby"method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Write your message" required></textarea>
+        <button type="submit">Send <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+      <p>Or write to me directly at: <strong>nashalyorozcoo@gmail.com</strong></p>
+    </div>
+  </section>
+
+  <footer>
+   
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/nashaly-estefany-orozco-ortiz-336684369/"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/nashaly-estefany"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
